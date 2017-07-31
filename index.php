@@ -17,7 +17,8 @@ $userID = $input['entry'][0]['messaging']['sender']['id'];
 
 $message = $input['entry'][0]['messaging'][0]['message']['text'];
 
-echo $userID."and ".$message;
+echo $userID;
+echo $message;
 
 
 //------
