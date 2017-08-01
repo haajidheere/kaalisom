@@ -8,17 +8,13 @@ if(isset($_REQUEST['hub_challenge'])){
 if($token == "myCustomeToken123") {
     echo $challenge;
 }
-if($token == "myCustomeToken123") {
-    echo $challenge;
-}
 $input = json_decode(file_get_contents('php://input'), true);
 
 $userID = $input['entry'][0]['messaging']['sender']['id'];
 
 $message = $input['entry'][0]['messaging'][0]['message']['text'];
 
-echo $userID;
-echo $message;
+echo $userID."and ".$message;
 
 
 //------
@@ -44,4 +40,5 @@ if(!empty($input['entry'][0]['messaging'][0]['message'])) {
     curl_exec($ch);
     
 }
+
 ?>
